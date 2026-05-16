@@ -20,8 +20,8 @@ export const authOptions: NextAuthOptions = {
           where: { email: credentials.email },
         });
 
-        if (!user) {
-          throw new Error("Invalid credentials");
+        if (!user || !user.password) {
+          throw new Error("Invalid credentials or account not set up");
         }
 
         if (!user.password) {
