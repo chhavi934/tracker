@@ -6,6 +6,8 @@ import { isBefore, startOfDay } from "date-fns";
 import CreateTaskModal from "./CreateTaskModal";
 import TaskTable from "./TaskTable";
 
+export const dynamic = "force-dynamic";
+
 export default async function DashboardPage() {
   const session = await getServerSession(authOptions);
 

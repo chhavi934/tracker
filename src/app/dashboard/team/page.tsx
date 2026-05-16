@@ -4,6 +4,8 @@ import { prisma } from "@/lib/prisma";
 import InviteMemberModal from "./InviteMemberModal";
 import TeamList from "./TeamList";
 
+export const dynamic = "force-dynamic";
+
 export default async function TeamPage() {
   const session = await getServerSession(authOptions);
 

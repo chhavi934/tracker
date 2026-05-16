@@ -5,6 +5,8 @@ import Link from "next/link";
 import { Plus, FolderKanban, Users, CheckSquare } from "lucide-react";
 import CreateProjectModal from "./CreateProjectModal";
 
+export const dynamic = "force-dynamic";
+
 export default async function ProjectsPage() {
   const session = await getServerSession(authOptions);
 
