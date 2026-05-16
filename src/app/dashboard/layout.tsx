@@ -49,10 +49,10 @@ export default async function DashboardLayout({
         <div className="p-4 border-t border-indigo-800/50 bg-black/10">
           <div className="flex items-center gap-3 mb-4 px-2">
             <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-pink-500 to-yellow-400 shadow-[0_0_12px_rgba(236,72,153,0.6)] flex-shrink-0 flex items-center justify-center text-white font-bold text-lg border border-white/30">
-              {session.user.name.charAt(0).toUpperCase()}
+              {(session.user.name || "U").charAt(0).toUpperCase()}
             </div>
             <div className="overflow-hidden">
-              <p className="text-sm font-bold text-white truncate">{session.user.name}</p>
+              <p className="text-sm font-bold text-white truncate">{session.user.name || "User"}</p>
               <span className="inline-block px-2 py-0.5 mt-1 bg-pink-500/20 border border-pink-500/30 text-pink-300 text-[10px] uppercase tracking-widest rounded-full font-bold">
                 {session.user.role}
               </span>
